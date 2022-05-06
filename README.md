@@ -1,6 +1,6 @@
 # Imgut auto resize
 
-A simple Tampermonkey/Violentmonkey script to automatically resize Imgur images and videos to fit the screen size
+A simple Tampermonkey/Violentmonkey script to automatically resize Imgur images and videos to fit the screen height
 
 
 ## Installation

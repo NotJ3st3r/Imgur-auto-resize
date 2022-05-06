@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Imgur auto resize
 // @namespace    https://greasyfork.org/en/scripts/434744-imgur-auto-resize
-// @version      1.1
+// @version      1.2
 // @description  Automatically resizes imgur videos to fit the screen height
 // @icon         https://imgur.com/favicon.ico
 // @author       NotJ3st3r
@@ -13,9 +13,21 @@
 (function() {
     'use strict';
     addGlobalStyle('body { overflow: hidden !important; }');
-    var video = document.getElementsByTagName('video');
-    video[0].style.height = "100vh";
-    video[0].style.width = "auto";
+  
+    try {
+        var video = document.getElementsByTagName('video');  
+        video[0].style.height = "100vh";
+        video[0].style.width = "auto";
+        video[0].setAttribute("controls", "controls");
+    }
+    catch{}
+    
+    try {
+        var image = document.getElementsByTagName("img");
+        image[0].style.height = "100vh";
+        image[0].style.width = "auto";
+    }
+    catch{}
 })();
 
 function addGlobalStyle(css) {
